@@ -212,7 +212,7 @@ async def progress_status(gid, message, previous):
             else:
                 logger.info(str(file.error_message))
                 await message.edit_text("Error : `{}`".format(str(file.error_message)))
-                retur
+                return
             await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
             await progress_status(gid, message, previous)
         else:
